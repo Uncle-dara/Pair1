@@ -127,6 +127,13 @@ public void testRemoveAt()
 @Test
 public void testSize() 
 {
+    System.out.println("Test Size");
+    TodoList ins = new TodoList();
+    String st1 = "FirstOne";
+    int initSize = 0;
+    ins.add(st1); // add element 
+    int actualSize = ins.size(); // initialize actual size of list and check the actual size
+    assertEquals(actualSize,initSize+1);
 //fail("Not yet implemented");
 }
     
