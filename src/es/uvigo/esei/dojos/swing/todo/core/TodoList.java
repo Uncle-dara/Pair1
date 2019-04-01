@@ -44,13 +44,14 @@ public class TodoList implements Iterable<String>{
 		//if (i >= 0 && i < this.list.size()) {
 			//list.remove(list);
 		//}
-                if (this.list.size()>0)
-            {
-                for (int i=0; i<this.list.size();i++)
-                {
-                    this.list.remove(i);
-                }
-            }
+                this.list.clear();
+//                if (this.list.size()>0)
+//            {
+//                for (int i=0; i<this.list.size();i++)
+//                {
+//                    this.list.remove(i);
+//                }
+//            }
 	}
         
         public void upperCase(){

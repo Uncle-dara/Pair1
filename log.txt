@@ -1,0 +1,72 @@
+commit 397d188db6614788a068ab84894d080086d98343
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 14:58:25 2019 +0100
+
+    Added test for deleteall passed (done)
+
+commit bbe81f00fcba4047f57cdde5492071b1fd7bfc51
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 14:56:36 2019 +0100
+
+    Added test for uppercase passed (done)
+
+commit fab702d8755ae7779ea726378189cdae6050fb8d
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 14:53:33 2019 +0100
+
+    Added UpperCase Buton Implemented but not Tested
+
+commit 7cf89b9d160c582f79a8c6e81eb862ba5ff0fb94
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 14:44:07 2019 +0100
+
+    Delete All Button partially implemented
+
+commit dd6a252f629c412f8b14a0d07dc51541123745c1
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 14:17:36 2019 +0100
+
+    Created new testSize passed  (done)
+
+commit 5cefede972067490411544a5746cca8a7340e17c
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 14:12:38 2019 +0100
+
+    Created new testRemove passed  (done)
+
+commit 2bec4a30cf89ab61a61b3d8d3c0d0ebcce6db7d2
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 14:08:36 2019 +0100
+
+    Created new testEdit passed  (done)
+
+commit 717ad6a2f2099d3d75132509475fb455916269e6
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 14:02:04 2019 +0100
+
+    Added comments into previous test - moveUp and moveDown
+    Created new testAdd passed  (done)
+
+commit 6df44312b8b4925541b78458be0ab57230357e58
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 13:40:29 2019 +0100
+
+    Minor Change for test name moveDown
+
+commit dcb4de006622c9dddaf0ecfeab7521f397031915
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 13:39:15 2019 +0100
+
+    Test MoveDown Passed (Done)
+
+commit 23487f039c0b26d89ba25a7d3a8f5b19043fb530
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 13:37:54 2019 +0100
+
+    Test MoveUp Passed (Done)
+
+commit 441d53251c985a1cf084aaf4aefdb5bd7da5f8f7
+Author: mk17acz <mk17acz@ENT-D410-15.herts.ac.uk>
+Date:   Mon Apr 1 13:18:47 2019 +0100
+
+    initial Commit
