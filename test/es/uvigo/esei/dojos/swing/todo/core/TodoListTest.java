@@ -113,6 +113,14 @@ public void testEditAt()
 @Test
 public void testRemoveAt() 
 {
+    System.out.println("Test Remove");
+    TodoList ins = new TodoList();
+    String st1 = "FirstOne";
+    ins.add(st1);
+    /// Check if the selected element deleted
+    ins.removeAt(0); // delete element
+    int size = ins.size(); // check if the element is deleted and empty
+    assertEquals(true,size==0);
 //fail("Not yet implemented");
 }
 
