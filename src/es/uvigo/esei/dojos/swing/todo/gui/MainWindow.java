@@ -37,7 +37,9 @@ public class MainWindow extends JFrame{
 	private JPanel taskListControls;
 	private JButton upButton;
 	private JButton deleteButton;
+        private JButton deleteAllButton;
 	private JButton downButton;
+        private JButton upperCaseButton;
 	private JList<String> taskList;
 	private JLabel statusBar;
 		
@@ -136,6 +138,12 @@ public class MainWindow extends JFrame{
 			button = getDownButton();
 			button.setAlignmentX(CENTER_ALIGNMENT);
 			this.taskListControls.add(button);
+                        
+                        this.taskListControls.add(createVerticalStrut(10));
+			
+			button = getDeleteAllButton();
+			button.setAlignmentX(CENTER_ALIGNMENT);
+			this.taskListControls.add(button);
 		}
 		
 		return this.taskListControls;
@@ -175,6 +183,22 @@ public class MainWindow extends JFrame{
 		
 		return this.deleteButton;
 	}
+        
+        private JButton getDeleteAllButton() {
+		if (this.deleteAllButton == null) {
+			this.deleteAllButton = new JButton("Delete All");
+			this.deleteAllButton.setIcon(createIcon("bin.png"));
+			
+			this.deleteAllButton.addMouseListener(new MouseAdapter(){
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					todoListModel.deleteAll(getTaskList().getSelectedIndex());
+				}
+			});
+		}
+		
+		return this.deleteAllButton;
+	}
 
 	private JButton getDownButton() {
 		if (this.downButton == null) {
@@ -195,6 +219,8 @@ public class MainWindow extends JFrame{
 		
 		return this.downButton;
 	}
+        
+        
 
 	private JButton getAddTaskButton() {
 		if (this.addTaskButton == null) {

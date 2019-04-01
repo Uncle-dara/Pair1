@@ -32,6 +32,7 @@ public class MainWindowTable extends JFrame{
 	private JPanel taskListControls;
 	private JButton upButton;
 	private JButton deleteButton;
+        private JButton deleteAllButton;
 	private JButton downButton;
 	private JTable tasksTable;
 	
@@ -58,6 +59,11 @@ public class MainWindowTable extends JFrame{
 		
 		public void removeAt(int i) {
 			this.list.removeAt(i);
+			this.fireTableRowsDeleted(i, i);
+		}
+		
+                public void deleteAll(int i) {
+			this.list.deleteAll();
 			this.fireTableRowsDeleted(i, i);
 		}
 		
@@ -183,6 +189,11 @@ public class MainWindowTable extends JFrame{
 			button.setAlignmentX(CENTER_ALIGNMENT);
 			this.taskListControls.add(button);
 			this.taskListControls.add(Box.createRigidArea(new Dimension(0, 10)));
+                        
+                        button = getDeleteAllButton();
+			button.setAlignmentX(CENTER_ALIGNMENT);
+			this.taskListControls.add(button);
+			this.taskListControls.add(Box.createRigidArea(new Dimension(0, 10)));
 			
 			button = getDownButton();
 			button.setAlignmentX(CENTER_ALIGNMENT);
@@ -223,6 +234,22 @@ public class MainWindowTable extends JFrame{
 		}
 		return this.deleteButton;
 	}
+        
+        private JButton getDeleteAllButton() {
+		if (this.deleteAllButton == null) {
+			this.deleteAllButton = new JButton("Delete All");
+			this.deleteAllButton.setIcon(new ImageIcon(getClass().getResource("/es/uvigo/esei/dojos/swing/todo/gui/bin.png")));
+			
+			this.deleteAllButton.addMouseListener(new MouseAdapter(){
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					todoTableModel.deleteAll(getTasksTable().getSelectedRow());
+				}
+			});
+		}
+		return this.deleteAllButton;
+	}
+
 
 	private JButton getUpButton() {
 		if (this.upButton == null) {
