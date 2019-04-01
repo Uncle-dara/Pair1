@@ -45,12 +45,12 @@ public class TodoListTest {
 public void testMoveUp() 
 {
     System.out.println("Test MoveUp");
-    int i=0;
+    //int i=0;
     TodoList ins = new TodoList();
     String st1 = "FirstOne";
     String st2 = "SecondOne";
-    ins.add(st1);
-    ins.add(st2);
+    ins.add(st1); //adding string 1 into new instance 
+    ins.add(st2); //adding string 2 into new instance 
     ins.moveUp(1);
     String result = ins.elementAt(0);
     assertEquals(true,st2.equals(result));
@@ -61,7 +61,7 @@ public void testMoveUp()
 public void testMoveDown() 
 {
     System.out.println("Test MoveDown");
-    int i=0;
+    //int i=0;
     TodoList ins = new TodoList();
     String st1 = "FirstOne";
     String st2 = "SecondOne";
@@ -76,6 +76,21 @@ public void testMoveDown()
 @Test
 public void testAdd() 
 {
+    System.out.println("Test Add");
+    boolean sizeFlag=false,correctString=false;
+    TodoList ins = new TodoList();
+    String st1 = "FirstOne";
+    /// Check the Size of list before and after the adding function
+    int initialSize = ins.size(); // List size expecdted to be = 0
+    ins.add(st1);
+    int addedSize = ins.size(); // List size expecdted to be = 1
+    if (initialSize+1==addedSize)
+        sizeFlag = true;
+    /// Check if the right element added
+    String result = ins.elementAt(0); // getting the newly added element
+    if (result.equals(st1))
+        correctString = true;
+    assertEquals(true,sizeFlag&&correctString);
 //fail("Not yet implemented");
 }
 
