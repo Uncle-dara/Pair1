@@ -97,6 +97,16 @@ public void testAdd()
 @Test
 public void testEditAt() 
 {
+    System.out.println("Test Edit");
+    TodoList ins = new TodoList();
+    int elementIndex = 0;
+    String st1 = "FirstOne";
+    ins.add(st1);
+    /// Check if the selected element modified
+    String st2 = "ModifiedOne";
+    ins.editAt(elementIndex, st2); // Modified element with new one
+    String result = ins.elementAt(elementIndex); // getting the newly modified element
+    assertEquals(true,result.equals(st2));
 //fail("Not yet implemented");
 }
 
