@@ -148,5 +148,17 @@ public void testUpperCase()
     assertEquals(true,actualString.equals(st1.toUpperCase()));
 //fail("Not yet implemented");
 }
+@Test
+public void testDeleteAll() 
+{
+    System.out.println("Test Delete All");
+    TodoList ins = new TodoList();
+    String st1 = "FirstOne";
+    ins.add(st1); // add element 
+    ins.deleteAll();
+    int actSize = ins.size();
+    assertEquals(true,actSize==0);
+//fail("Not yet implemented");
+}
     
 }
