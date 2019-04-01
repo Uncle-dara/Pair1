@@ -44,37 +44,47 @@ public class TodoListTest {
     @Test
 public void testMoveUp() 
 {
-fail("Not yet implemented");
+    System.out.print("Test MoveUp");
+    int i=0;
+    TodoList ins = new TodoList();
+    String st1 = "FirstOne";
+    String st2 = "SecondOne";
+    ins.add(st1);
+    ins.add(st2);
+    ins.moveUp(1);
+    String result = ins.elementAt(0);
+    assertEquals(true,st2.equals(result));
+//fail("Not yet implemented");
 }
 
 @Test
 public void testMoveDown() 
 {
-fail("Not yet implemented");
+//fail("Not yet implemented");
 }
 
 @Test
 public void testAdd() 
 {
-fail("Not yet implemented");
+//fail("Not yet implemented");
 }
 
 @Test
 public void testEditAt() 
 {
-fail("Not yet implemented");
+//fail("Not yet implemented");
 }
 
 @Test
 public void testRemoveAt() 
 {
-fail("Not yet implemented");
+//fail("Not yet implemented");
 }
 
 @Test
 public void testSize() 
 {
-fail("Not yet implemented");
+//fail("Not yet implemented");
 }
     
 }
