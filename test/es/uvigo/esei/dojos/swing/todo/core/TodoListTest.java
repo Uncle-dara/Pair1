@@ -44,7 +44,7 @@ public class TodoListTest {
     @Test
 public void testMoveUp() 
 {
-    System.out.print("Test MoveUp");
+    System.out.println("Test MoveUp");
     int i=0;
     TodoList ins = new TodoList();
     String st1 = "FirstOne";
@@ -60,7 +60,7 @@ public void testMoveUp()
 @Test
 public void testMoveDown() 
 {
-    System.out.print("Test MoveUp");
+    System.out.println("Test MoveDown");
     int i=0;
     TodoList ins = new TodoList();
     String st1 = "FirstOne";
