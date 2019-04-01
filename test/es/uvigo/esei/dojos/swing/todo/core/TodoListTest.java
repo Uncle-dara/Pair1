@@ -60,6 +60,16 @@ public void testMoveUp()
 @Test
 public void testMoveDown() 
 {
+    System.out.print("Test MoveUp");
+    int i=0;
+    TodoList ins = new TodoList();
+    String st1 = "FirstOne";
+    String st2 = "SecondOne";
+    ins.add(st1);
+    ins.add(st2);
+    ins.moveDown(0);
+    String result = ins.elementAt(1);
+    assertEquals(true,st1.equals(result));
 //fail("Not yet implemented");
 }
 
