@@ -144,6 +144,12 @@ public class MainWindow extends JFrame{
 			button = getDeleteAllButton();
 			button.setAlignmentX(CENTER_ALIGNMENT);
 			this.taskListControls.add(button);
+                        
+                        this.taskListControls.add(createVerticalStrut(10));
+			
+			button = getUpperCaseButton();
+			button.setAlignmentX(CENTER_ALIGNMENT);
+			this.taskListControls.add(button);
 		}
 		
 		return this.taskListControls;
@@ -220,7 +226,21 @@ public class MainWindow extends JFrame{
 		return this.downButton;
 	}
         
-        
+        private JButton getUpperCaseButton() {
+		if (this.upperCaseButton == null) {
+			this.upperCaseButton = new JButton("Upper Case");
+			
+			this.upperCaseButton.addMouseListener(new MouseAdapter(){
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					int pos = getTaskList().getSelectedIndex();
+					todoListModel.upperCase(pos);
+				}
+			});
+		}
+		
+		return this.upperCaseButton;
+	}
 
 	private JButton getAddTaskButton() {
 		if (this.addTaskButton == null) {

@@ -32,6 +32,11 @@ public class TodoListModel extends AbstractListModel<String> {
 		this.fireContentsChanged(this, i, i);
 	}
         
+        public void upperCase(int i) {
+		this.list.upperCase();
+		this.fireContentsChanged(this, i, i);
+	}
+        
 	public void add(String task) {
 		this.list.add(task);
 		this.fireContentsChanged(this, 

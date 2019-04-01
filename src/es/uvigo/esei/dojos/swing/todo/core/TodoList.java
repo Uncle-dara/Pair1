@@ -52,6 +52,11 @@ public class TodoList implements Iterable<String>{
                 }
             }
 	}
+        
+        public void upperCase(){
+            for (int i=0;i<this.list.size();i++)
+                this.list.set(i, this.list.get(i).toUpperCase());
+	}
 	
 	public int size() {
 		return list.size();

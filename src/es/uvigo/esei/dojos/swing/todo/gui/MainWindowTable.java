@@ -34,6 +34,7 @@ public class MainWindowTable extends JFrame{
 	private JButton deleteButton;
         private JButton deleteAllButton;
 	private JButton downButton;
+        private JButton upperCaseButton;
 	private JTable tasksTable;
 	
 	private TodoList todoList;
@@ -64,6 +65,11 @@ public class MainWindowTable extends JFrame{
 		
                 public void deleteAll(int i) {
 			this.list.deleteAll();
+			this.fireTableRowsDeleted(i, i);
+		}
+                
+                 public void upperCase(int i) {
+			this.list.upperCase();
 			this.fireTableRowsDeleted(i, i);
 		}
 		
@@ -199,6 +205,10 @@ public class MainWindowTable extends JFrame{
 			button.setAlignmentX(CENTER_ALIGNMENT);
 			this.taskListControls.add(button);
 			
+                        button = getUpperCaseButton();
+			button.setAlignmentX(CENTER_ALIGNMENT);
+			this.taskListControls.add(button);
+			this.taskListControls.add(Box.createRigidArea(new Dimension(0, 10)));
 		}
 		
 		return this.taskListControls;
@@ -267,6 +277,22 @@ public class MainWindowTable extends JFrame{
 			});
 		}
 		return this.upButton;
+	}
+        
+        private JButton getUpperCaseButton() {
+		if (this.upperCaseButton == null) {
+			this.upperCaseButton = new JButton("Upper Case");	
+			this.upperCaseButton.addMouseListener(new MouseAdapter(){
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					int pos = getTasksTable().getSelectedRow();
+					todoTableModel.upperCase(pos);
+					
+					
+				}
+			});
+		}
+		return this.upperCaseButton;
 	}
 	
 	private JButton getAddTaskButton() {
